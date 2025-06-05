@@ -225,7 +225,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                       );
                                     },
 
-                                    child: Text("View Product"),
+                                    child: Text("View Product",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -370,6 +372,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text('Price: \$${product["price"]}'),
 
                                   ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.black,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 40,
+                                        vertical: 14,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      elevation: 4,
+                                    ),
                                     onPressed: () async {
                                       SharedPreferences prefs =
                                           await SharedPreferences.getInstance();
@@ -388,7 +401,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       );
                                     },
-                                    child: Text("View Product"),
+                                    child: Text("View Product", style: TextStyle(color: Colors.white),),
                                   ),
                                 ],
                               ),
